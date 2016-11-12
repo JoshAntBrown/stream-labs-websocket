@@ -19,7 +19,7 @@ request({
   let token = data.token
 
   console.log('Connecting to websocket')
-  let twitchAlerts = io('http://io.twitchalerts.com:4567', {query: {token}})
+  let twitchAlerts = io('http://io.streamlabs.com', {query: {token}})
 
   twitchAlerts.on('connect', logResult('connect'))
   twitchAlerts.on('connect_error', logResult('connect_error'))
